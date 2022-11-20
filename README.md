@@ -152,23 +152,24 @@ menu_roteiros() printa o ID e o NOME de cada roteiro pronto e fornece a condiç�
 
 menu_meu_roteiro() é o maior subprograma do código, ele printa um novo menu com 4 condições, sendo uma delas o 0 - Voltar:
 	
-	A **condição 1** chama uma nova função buscar_passeios() que tem como finalidade filtrar as atrações
+	// A condição 1 chama uma nova função buscar_passeios() que tem como finalidade filtrar
 	e adicionar a atração desejada a lista meu_roteiro. Para tal, é oferecido 3 opções:
 	uma de exibir todas as atrações, que fica dentro do próprio subprograma,
-	E outras duas opções de filtro por tipo ou horário, chamando suas respectivas funções com parâmetro:
+	E outras duas opções de filtro por tipo ou horário,
+	chama suas respectivas funções com parâmetro:
 	As funções horario(turno) e tipo(categoria) recebem o parâmetro para filtrar 
 	nos values dos dicionários de atrações da lista atracoes
 	e solicita ao usuário se ele deseja adicionar a atração à lista meu_roteiro. 
 	Seguem o mesmo conceito e podem ser replicados para qualquer filtro.
 
-	A **condição 2** serve para imprimir as atrações contidas na lista meu_roteiro,
+	// A condição 2 serve para imprimir as atrações contidas na lista meu_roteiro,
 	caso haja roteiros, se não houver, é ativado um timer e avisa que não roteiro.
 	Em seguida, pergunta se o usuário deseja salvar o roteiro, caso sim: ele cria um novo dicionário,
-	que estabelece o ID como o maior número utilizado por outros IDs +1 (não inviabiliza o zero do sair/voltar),
+	que estabelece o ID como o maior número utilizado por outros IDs +1,
 	pede para o usuário digitar o nome do roteiro, adiciona o roteiro à lista meus_roteiros 
 	e apaga a lista meu_roteiro para que o usuário possa criar um novo roteiro futuramente.
 
-	A **condição 3** printa os roteiros salvos na lista meus_roteiros por meio de um for,
+	// A condição 3 printa os roteiros salvos na lista meus_roteiros por meio de um for,
 	solicita que o usuário selecione um deles para receber a descrição
 	e dá a opção de exportá-lo como um arquivo txt.
 	
